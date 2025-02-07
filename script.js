@@ -1,22 +1,16 @@
 const button = document.getElementById("search-button");
 const input = document.getElementById("City-input");
-
-// Current Location Elements
 const currentCity = document.getElementById("current-city");
 const currentTime = document.getElementById("current-time");
 const currentTemp = document.getElementById("current-temp");
-
-// Searched Location Elements
 const cityDisplayName = document.getElementById("City-name");
 const time = document.getElementById("City-time");
 const temp = document.getElementById("City-temp");
 const weatherInfo = document.getElementById("weather-info");
 const errorMessage = document.getElementById("error-message");
-
 const API_KEY = "415021de044b4e9ebc9172852242602";
 const BASE_URL = "https://api.weatherapi.com/v1/current.json";
 
-// Function to fetch weather data
 async function getData(cityName) {
     try {
         const response = await fetch(`${BASE_URL}?key=${API_KEY}&q=${cityName}&aqi=no`);
@@ -27,7 +21,6 @@ async function getData(cityName) {
     }
 }
 
-// Auto-fetch weather for user's location
 async function getCurrentLocationWeather() {
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
@@ -59,7 +52,6 @@ async function getCurrentLocationWeather() {
     }
 }
 
-// Search for another location's weather
 button.addEventListener("click", async () => {
     const value = input.value.trim();
 
@@ -86,5 +78,4 @@ button.addEventListener("click", async () => {
     }
 });
 
-// Load user's location weather on startup
 getCurrentLocationWeather();
