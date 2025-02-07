@@ -18,8 +18,8 @@ cd weather-app
 Just double-click index.html, or open it with a Live Server in VS Code.
 
 
-3️⃣ Add Your API Key (if required)
-This project uses WeatherAPI. You may need to add your own API key in script.js:
+3️⃣ Add Your API Key 
+This project uses WeatherAPI. You may need to add your own API key in script.js. Goto WeatherAPI.com andg et your Api Key.
 
 javascript
 const API_KEY = "YOUR_WEATHER_API_KEY_HERE";
