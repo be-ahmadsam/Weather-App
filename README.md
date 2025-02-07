@@ -10,7 +10,7 @@
 
 🚀 Getting Started
 1️⃣ Clone the Repository
-git clone https://github.com/be_ahmadsam/Weather-App.git
+git clone https://github.com/be-ahmadsam/Weather-App.git
 cd weather-app
 
 
